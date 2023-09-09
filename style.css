@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Proza Libre', sans-serif;
+    background: #EAF2EF;
+    text-align: center;
+    
+}
+
+.container{
+    margin: 0.9em 5em;
+    padding: 0 2em;
+    background: #d4c2c9;
+    border: 2px solid #be91a3;
+    border-radius: 20px ;
+
+}
+
+.personalprofile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4em;
+    font-style: italic;
+    font-weight:bolder;
+    color: #912f56;
+    margin: 0.2em 0;
+    
+}
+
+h3{
+    font-size: 2rem;
+    color:#0d090a ;
+    margin: 0;
+    padding: 0.2em;
+
+}
+.track {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    border: 1px solid #441c36;
+    border-radius: 100px;
+    background: #521945;
+}
+img {
+    width: 15em;
+    max-height: 15em;
+    border: solid 3px #A8607D;
+    border-radius: 120px;
+    margin: 0;
+}
+
+.fa-brands {
+    margin-left: 0.5em;
+}
+
+.date {
+    font-style: italic;
+    font-weight: 600;
+    color: #912f56;
+}
+.time {
+    color: #361f27;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+.datetime{
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    img {
+        width : 10em;
+        max-height: 10em;
+        border-radius: 100px;
+    }
+
+    h1{
+        font-size: 2.5em;
+        font-weight: 1000;
+        padding: 0.5em 0;
+    }
+    h3{
+        font-size: 1.5em;
+        padding: 0.5em;
+        font-weight: 700;
+    }
+    .datetime {
+        font-size: 700;
+    }
+  }
