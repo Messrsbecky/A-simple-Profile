@@ -3,6 +3,7 @@ const minuteE1 = document.getElementById("minutes");
 const secondE1 = document.getElementById("seconds");
 const ampmE1 = document.getElementById("ampm");
 
+
 function updateClock(){  
     let h = new Date().getHours()
     let m = new Date().getMinutes()
@@ -25,7 +26,8 @@ function updateClock(){
     ampmE1, (innerText = ampm);
     setTimeout(()=>{
         updateClock()
-    }, 1000)
+    }, 1000);
+
 }
 
 updateClock()
@@ -58,10 +60,9 @@ function formatDate (date) {
         "December"
       ];
 
-      return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
+      return `${DAYS[date.getDay()]}, ${MONTHS[date.getUTCMonth()]} ${date.getDate()} ${date.getFullYear()}`;
  }
-
-
+ 
  setInterval(() =>{
     const now = new Date();
 
@@ -69,7 +70,7 @@ function formatDate (date) {
   }, 200);
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Function to get current UTC milliseconds
+    
     function getCurrentUTCMilliseconds() {
         return Date.now();
     }
@@ -83,4 +84,5 @@ function formatDate (date) {
 
     updateUTCMilliseconds();
     setInterval(updateUTCMilliseconds, 1000); 
-});     
+});
+
