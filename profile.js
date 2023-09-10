@@ -4,9 +4,9 @@ const secondE1 = document.getElementById("seconds");
 const ampmE1 = document.getElementById("ampm");
 
 function updateClock(){  
-    let h = new Date().getUTCHours()
-    let m = new Date().getUTCMinutes()
-    let s = new Date().getUTCSeconds()
+    let h = new Date().getHours()
+    let m = new Date().getMinutes()
+    let s = new Date().getSeconds()
     let ampm = "AM"
 
     if(h > 12){
@@ -58,11 +58,34 @@ function formatDate (date) {
         "December"
       ];
 
-      return `${DAYS[date.getUTCDay()]}, ${MONTHS[date.getUTCMonth()]} ${date.getUTCDate()} ${date.getUTCFullYear()}`;
+      return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
  }
  
  setInterval(() =>{
     const now = new Date();
+
+ setInterval(() =>{
+    const now = new Date();
+
+    dateElement.textContent = formatDate(now);
+  }, 200);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to get current UTC milliseconds
+    function getCurrentUTCMilliseconds() {
+        return Date.now();
+    }
+
+    const utcMillisecondsElement = document.getElementById("utc-milliseconds");
+
+    function updateUTCMilliseconds() {
+        const currentUTCMilliseconds = getCurrentUTCMilliseconds();
+        utcMillisecondsElement.textContent = `Current UTC Milliseconds: ${currentUTCMilliseconds}`;
+    }
+
+    updateUTCMilliseconds();
+    setInterval(updateUTCMilliseconds, 1000); 
+});     
 
     dateElement.textContent = formatDate(now);
   }, 200);
