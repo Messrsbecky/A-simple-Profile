@@ -60,9 +60,7 @@ function formatDate (date) {
 
       return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
  }
- 
- setInterval(() =>{
-    const now = new Date();
+
 
  setInterval(() =>{
     const now = new Date();
@@ -86,6 +84,3 @@ function formatDate (date) {
     updateUTCMilliseconds();
     setInterval(updateUTCMilliseconds, 1000); 
 });     
-
-    dateElement.textContent = formatDate(now);
-  }, 200);
