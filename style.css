@@ -100,4 +100,9 @@ img {
     .datetime {
         font-size: 700;
     }
+    a {
+       display: block;
+       padding: 0.2em;
+       font-weight: 600;
+    }
   }
